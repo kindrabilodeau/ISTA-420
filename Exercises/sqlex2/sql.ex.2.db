@@ -1,0 +1,31 @@
+.echo
+.headers
+
+--Name: Kindra Bilodeau
+--File: SQL Exercise 02
+--Date: January 19, 2019
+
+1. Mailing Labels
+
+sqlite> select contacttitle || " " || contactname || "
+   ...> " || address || "
+   ...> " || city || " " || region || " " || postalcode || " " || country || "
+   ...>
+   ...>
+   ...> " from suppliers;
+
+2.
+
+sqlite>  select substr(contactname,instr(contactname, " "), instr(contactname, " ") + 1)
+|| ", " || substr(contactname, 1, instr(contactname, " ")-1) || " " ||
+companyname || " " || phone from customers;
+
+
+3. This gets the first columns but not the turnaround date.
+
+sqlite> select OrderID as order_number, orderdate, shippeddate,
+   ...> julianday(shippeddate) - julianday(orderdate)as turn_around from orders;
+
+
+4.SELECT julianday('2019-01-19') - julianday('1993-03-01');
+  [9455 days]

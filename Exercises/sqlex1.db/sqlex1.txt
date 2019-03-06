@@ -1,0 +1,34 @@
+--Name:Kindra Bilodeau
+--Date: January 11, 2019
+--Project: Sql Exercise 01 
+
+drop table if exists Appliances;
+
+create table Appliances (
+  id int,
+  brand text,
+  type text,
+  finish text,
+  price int
+);
+
+sqlite> insert into appliances values(1, "Whirlpool", "Washer", "White", 399);
+sqlite> insert into appliances values(2, "Maytag", "Dryer", "Slate", 550);
+sqlite> insert into appliances values(3, "Samsung", "Dishwasher", "Black Stainless", 750);
+sqlite> insert into appliances values(4, "Whirlpool", "Refrigerator", "Stainless", 1200);
+sqlite> insert into appliances values(5, "Frigidaire", "Dishwasher", "Black", 450);
+sqlite> insert into appliances values(6, "Kitchenaid", "Refrigerator", "Stainless", 4500);
+sqlite> insert into appliances values(7, "GE", "Washer", "Slate", 500);
+sqlite> insert into appliances values(8, "LG", "Microwave", "Stainless", 300;
+sqlite> insert into appliances values(8, "LG", "Microwave", "Stainless", 300);
+sqlite> insert into appliances values(9, "LG", "Refrigerator", "Black Stainless", 3500);
+
+select * from Appliances;
+
+select id, brand, price from Appliances where brand = "Whirlpool";
+
+sqlite> select brand, type, finish from Appliances where finish = "Stainless";
+
+select id, type from Appliances where type = "Dishwasher";
+
+select * from Appliances where price = 4500;
